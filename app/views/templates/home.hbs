@@ -1,0 +1,64 @@
+
+<div id="intro">
+  <h1>TeeMeUp</h1>
+  <p><em>You want T-shirts, you got T-shirts</em></p>
+</div>
+
+<div id="t-container" class="span7">
+  <strong id="size"></strong>
+  <div></div>
+</div>
+
+<form id="tee-form" class="form-vertical">
+  <fieldset>
+    <div class="control-group">
+      <label class="control-label" for="tshirt_size">Select size</label>
+      <div class="controls">
+        <select id="tshirt_size" class="span6 required" name="tshirt_size">
+          {{#each sizes}}
+            <option value="{{value}}">{{option}}</option>
+          {{/each}}
+        </select>
+        <i class="icon-hand-right"></i>
+        <i class="icon-thumbs-up"></i>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="tshirt_color">Select Color</label>
+      <div class="controls">
+        <select id="tshirt_color" class="span6 required" name="tshirt_color">
+          {{#each colors}}
+            <option value="{{value}}" class="{{option}}">{{option}}</option>
+          {{/each}}
+        </select>
+        <i class="icon-hand-right"></i>
+        <i class="icon-thumbs-up"></i>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">Choose your image <small>(Not Required)</small></label>
+      <div class="controls">
+        <ul id="prints">
+          <li class="print-style1"></li>
+          <li class="print-style2"></li>
+          <li class="print-style3"></li>
+          <li class="print-style4"></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="tshirt_amount">How many?</label>
+      <div class="controls">
+        <input type="text" class="span6 required" id="amount" name="tshirt_amount">
+        <i class="icon-hand-right"></i>
+        <i class="icon-thumbs-up"></i>
+      </div>
+    </div>
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary span6" id="submit">Hook it Up!</button>
+    </div>
+  </fieldset>
+</form>
+
+
